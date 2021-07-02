@@ -19,12 +19,15 @@ export default createGlobalStyle`
         font-size:${({ theme }) => theme.fontSizes.h1};
         font-weight: bold;
         margin: 15px 0 15px 0;
+        line-height: 75px;
     }
 
     h2{
         font-size:${({ theme }) => theme.fontSizes.h2};
         font-weight: bold;
         margin: 10px 0 10px 0;
+        line-height: 55px;
+
     }
 
     p{
