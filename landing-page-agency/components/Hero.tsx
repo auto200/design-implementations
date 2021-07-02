@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   position: relative;
   height: 707px;
   width: 100%;
-  border-radius: 15px;
+  border-radius: 35px;
   overflow: hidden;
   display: flex;
   color: ${({ theme }) => theme.colors.white};
@@ -27,7 +27,6 @@ const Text = styled.div`
     max-width: 471px;
     margin-top: 35px;
     margin-bottom: 40px;
-    line-height: 25px;
   }
 `;
 
