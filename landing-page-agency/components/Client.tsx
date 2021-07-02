@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
       <h2>Client</h2>
       <p>Using Our Experience To Make Your Digital Experience Brighter</p>
       <div>
-        <img src="client/client.png" />
+        <img src="images/client/client.png" />
       </div>
     </Wrapper>
   );

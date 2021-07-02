@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
-import Logo from "public/Logo.png";
+import Logo from "public/images/Logo.png";
 
 const Wrapper = styled.header`
   width: 100%;

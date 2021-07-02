@@ -7,7 +7,7 @@ const Wrapper = styled.div`
   border-radius: 35px;
   margin-top: -90px;
   background: ${({ theme }) =>
-    `url(images/about-us-pattern.png), ${theme.colors.primary}`};
+    `url(images/about-us/pattern.png), ${theme.colors.primary}`};
   background-size: cover;
   z-index: 10;
   color: ${({ theme }) => theme.colors.white};
