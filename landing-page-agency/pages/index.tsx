@@ -4,6 +4,7 @@ import AboutUs from "components/AboutUs";
 import Client from "components/Client";
 import Services from "components/Services";
 import Process from "components/Process";
+import ProductPortfolio from "components/ProductPortfolio";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Client />
       <Services />
       <Process />
+      <ProductPortfolio />
     </>
   );
 }
