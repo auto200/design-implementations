@@ -16,6 +16,8 @@ const Navigation = styled.nav`
     padding: 10px;
     cursor: pointer;
     border-radius: 10px;
+
+    transition: background-color 0.2s ease;
     &:hover {
       background-color: ${({ theme }) => theme.colors.secondary};
     }
