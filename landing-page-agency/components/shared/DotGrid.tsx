@@ -50,7 +50,6 @@ const DotGrid: React.FC<IDotGrid> = ({
 }) => {
   const [grid, setGrid] = useState<null[]>([]);
   const [gridRowCount, setGridRowCount] = useState<number>(0);
-  console.log(grid, gridRowCount);
 
   useEffect(() => {
     const rowCount = Math.floor(boxSize / gap);
@@ -60,11 +59,13 @@ const DotGrid: React.FC<IDotGrid> = ({
   }, [boxSize, gap]);
 
   return (
-    <Wrapper size={boxSize} gridRowCount={gridRowCount} {...rest}>
-      {grid.map((_, i) => (
-        <Dot color={dotColor} size={dotSize} key={i} />
-      ))}
-    </Wrapper>
+    <div {...rest}>
+      <Wrapper size={boxSize} gridRowCount={gridRowCount}>
+        {grid.map((_, i) => (
+          <Dot color={dotColor} size={dotSize} key={i} />
+        ))}
+      </Wrapper>
+    </div>
   );
 };
 

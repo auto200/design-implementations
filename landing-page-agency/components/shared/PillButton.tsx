@@ -15,11 +15,21 @@ const Button = styled.button<{ variant: Variant }>`
     variant === "dark" ? theme.colors.text : theme.colors.white};
 `;
 
-const PillButton: React.FC<{ variant?: Variant }> = ({
+interface Props {
+  variant?: Variant;
+  [key: string]: any;
+}
+
+const PillButton: React.FC<Props> = ({
   variant = "dark",
   children,
+  ...rest
 }) => {
-  return <Button variant={variant}>{children}</Button>;
+  return (
+    <Button variant={variant} {...rest}>
+      {children}
+    </Button>
+  );
 };
 
 export default PillButton;
