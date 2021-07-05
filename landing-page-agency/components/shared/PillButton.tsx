@@ -9,10 +9,11 @@ const Button = styled.button<{ variant: Variant }>`
   font-weight: bold;
   cursor: pointer;
   padding: 15px 35px 20px 35px;
+  text-align: center;
   color: ${({ theme, variant }) =>
     variant === "dark" ? theme.colors.white : theme.colors.text};
   background-color: ${({ theme, variant }) =>
-    variant === "dark" ? theme.colors.text : theme.colors.white};
+    variant === "dark" ? theme.colors.primary : theme.colors.white};
 
   transition: text-shadow 0.2s ease;
 
