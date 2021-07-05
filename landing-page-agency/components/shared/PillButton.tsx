@@ -13,6 +13,14 @@ const Button = styled.button<{ variant: Variant }>`
     variant === "dark" ? theme.colors.white : theme.colors.text};
   background-color: ${({ theme, variant }) =>
     variant === "dark" ? theme.colors.text : theme.colors.white};
+
+  transition: text-shadow 0.2s ease;
+
+  &:hover {
+    text-shadow: ${({ theme, variant }) =>
+        variant === "dark" ? theme.colors.white : theme.colors.text}
+      0 2px 3px;
+  }
 `;
 
 interface Props {
