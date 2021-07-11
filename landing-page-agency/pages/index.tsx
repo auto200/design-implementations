@@ -6,6 +6,7 @@ import Services from "components/Services";
 import Process from "components/Process";
 import ProductPortfolio from "components/ProductPortfolio";
 import Testimonials from "components/Testimonials";
+import Footer from "components/Footer";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Process />
       <ProductPortfolio />
       <Testimonials />
+      <Footer />
     </>
   );
 }
