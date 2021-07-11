@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import { ThemeType } from "utils/theme";
 
 interface WraperProps {
   size: number;
@@ -18,7 +19,7 @@ const Wrapper = styled.div.attrs<WraperProps>(({ size, gridRowCount }) => ({
 
 interface DotProps {
   size: number;
-  color?: string;
+  dotThemeColor: keyof ThemeType["colors"];
 }
 
 const Dot = styled.div.attrs<DotProps>(({ size }) => ({
@@ -30,14 +31,15 @@ const Dot = styled.div.attrs<DotProps>(({ size }) => ({
   border-radius: 50%;
   margin-right: 7px;
   margin-bottom: 7px;
-  background-color: ${({ theme, color }) => color || theme.colors.primary};
+  background-color: ${({ theme, dotThemeColor }) =>
+    theme.colors[dotThemeColor]};
 `;
 
 interface IDotGrid {
   boxSize?: number;
   dotSize?: number;
   gap?: number;
-  dotColor?: string;
+  dotThemeColor?: keyof ThemeType["colors"];
   [key: string]: any;
 }
 
@@ -45,7 +47,7 @@ const DotGrid: React.FC<IDotGrid> = ({
   boxSize = 200,
   gap = 15,
   dotSize = 6,
-  dotColor,
+  dotThemeColor = "primary",
   ...rest
 }) => {
   const [grid, setGrid] = useState<null[]>([]);
@@ -53,16 +55,15 @@ const DotGrid: React.FC<IDotGrid> = ({
 
   useEffect(() => {
     const rowCount = Math.floor(boxSize / gap);
-    const gridSize = rowCount ** 2;
     setGridRowCount(rowCount);
-    setGrid(new Array(gridSize).fill(null));
+    setGrid(new Array(rowCount ** 2).fill(null));
   }, [boxSize, gap]);
 
   return (
     <div {...rest}>
       <Wrapper size={boxSize} gridRowCount={gridRowCount}>
         {grid.map((_, i) => (
-          <Dot color={dotColor} size={dotSize} key={i} />
+          <Dot dotThemeColor={dotThemeColor} size={dotSize} key={i} />
         ))}
       </Wrapper>
     </div>
