@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { ImArrowLeft2, ImArrowRight2 } from "react-icons/im";
 import PillButton from "./shared/PillButton";
+import SliderControls from "./shared/SliderControls";
 
 const Wrapper = styled.div`
   margin-top: 180px;
@@ -10,29 +10,9 @@ const Wrapper = styled.div`
   }
 `;
 
-const SliderControls = styled.div`
+const PortfolioSliderControls = styled(SliderControls)`
   margin-left: auto;
-  display: flex;
   margin-right: 100px;
-`;
-
-const SliderButton = styled.button<{ disabled: boolean }>`
-  all: unset;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  height: 80px;
-  margin: 10px;
-  border-radius: 40%;
-  opacity: ${({ disabled }) => disabled && 0.5};
-  background-color: ${({ theme }) => theme.colors.primary};
-  color: ${({ theme }) => theme.colors.white};
-  font-size: 30px;
-
-  &:hover {
-    cursor: pointer;
-  }
 `;
 
 const Slider = styled.div`
@@ -78,14 +58,7 @@ const ProductPortfolio: React.FC = () => {
           <h2>We’ll let our work speak for itself</h2>
           <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
         </div>
-        <SliderControls>
-          <SliderButton disabled={true}>
-            <ImArrowLeft2 />
-          </SliderButton>
-          <SliderButton disabled={false}>
-            <ImArrowRight2 />
-          </SliderButton>
-        </SliderControls>
+        <PortfolioSliderControls />
       </div>
       <Slider>
         {slidesData.map(({ imageSrc, title, description }) => (
