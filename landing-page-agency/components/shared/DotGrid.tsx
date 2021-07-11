@@ -5,15 +5,18 @@ import { ThemeType } from "utils/theme";
 interface WraperProps {
   size: number;
   gridRowCount: number;
+  gap: number;
 }
 
-const Wrapper = styled.div.attrs<WraperProps>(({ size, gridRowCount }) => ({
-  style: {
-    width: size,
-    height: size,
-    gridTemplate: `repeat(${gridRowCount}, 1fr) / repeat(${gridRowCount}, 1fr)`,
-  },
-}))<WraperProps>`
+const Wrapper = styled.div.attrs<WraperProps>(
+  ({ size, gridRowCount, gap }) => ({
+    style: {
+      width: size,
+      height: size,
+      gridTemplate: `repeat(${gridRowCount}, ${gap}px) / repeat(${gridRowCount}, ${gap}px)`,
+    },
+  })
+)<WraperProps>`
   display: grid;
 `;
 
@@ -61,7 +64,7 @@ const DotGrid: React.FC<IDotGrid> = ({
 
   return (
     <div {...rest}>
-      <Wrapper size={boxSize} gridRowCount={gridRowCount}>
+      <Wrapper size={boxSize} gridRowCount={gridRowCount} gap={gap}>
         {grid.map((_, i) => (
           <Dot dotThemeColor={dotThemeColor} size={dotSize} key={i} />
         ))}
