@@ -7,11 +7,11 @@ import PillButton from "./shared/PillButton";
 const Wrapper = styled.div`
   position: relative;
   height: 707px;
-  width: 100%;
   border-radius: 35px;
   overflow: hidden;
   display: flex;
   color: ${({ theme }) => theme.colors.white};
+  z-index: -1;
 `;
 
 const Background = styled.div`

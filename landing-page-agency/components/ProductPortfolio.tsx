@@ -3,7 +3,6 @@ import { ImArrowLeft2, ImArrowRight2 } from "react-icons/im";
 import PillButton from "./shared/PillButton";
 
 const Wrapper = styled.div`
-  width: 100%;
   margin-top: 180px;
   & > div {
     display: flex;

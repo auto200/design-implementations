@@ -34,7 +34,6 @@ const Wrapper = styled.div`
   position: relative;
   padding-top: 45px;
   padding-bottom: 20px;
-  width: 100%;
   border: 1px solid ${({ theme }) => theme.colors.primary};
   display: flex;
 `;

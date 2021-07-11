@@ -5,11 +5,10 @@ const Wrapper = styled.div`
   width: 85%;
   height: 326px;
   border-radius: 35px;
-  margin-top: -90px;
+  margin: -90px auto 0 auto;
   background: ${({ theme }) =>
     `url(images/about-us/pattern.png), ${theme.colors.primary}`};
   background-size: cover;
-  z-index: 10;
   color: ${({ theme }) => theme.colors.white};
   display: flex;
   align-items: center;

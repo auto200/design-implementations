@@ -3,7 +3,6 @@ import Image from "next/image";
 import Logo from "public/images/Logo.png";
 
 const Wrapper = styled.header`
-  width: 100%;
   height: 80px;
   display: flex;
   justify-content: space-between;

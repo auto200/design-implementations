@@ -7,8 +7,6 @@ export default createGlobalStyle`
     ${gordita}
 
     body {
-        display: flex;
-        justify-content: center;
         background-color: ${({ theme }) => theme.colors.background};
         color:#303948;
         font-family: Gordita Regular;
@@ -38,8 +36,5 @@ export default createGlobalStyle`
         width: 1440px;
         margin: 0 auto;
         padding: 54px 90px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
 `;
