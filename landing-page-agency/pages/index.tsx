@@ -5,6 +5,7 @@ import Client from "components/Client";
 import Services from "components/Services";
 import Process from "components/Process";
 import ProductPortfolio from "components/ProductPortfolio";
+import Testimonials from "components/Testimonials";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Services />
       <Process />
       <ProductPortfolio />
+      <Testimonials />
     </>
   );
 }

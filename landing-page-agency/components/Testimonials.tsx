@@ -1,0 +1,105 @@
+import styled from "styled-components";
+import Image from "next/image";
+import JoeZImg from "public/images/testimontials/joe_z.png";
+import SliderControls from "./shared/SliderControls";
+import DotGrid from "./shared/DotGrid";
+import BluredBackgroundCircle from "./shared/decorations/BluredBackgroundCircle";
+
+const Wrapper = styled.div`
+  margin-top: 250px;
+  display: flex;
+`;
+
+const Left = styled.div`
+  flex: 1;
+  & > div {
+    position: relative;
+  }
+`;
+
+const RectangleBehindImage = styled.div`
+  position: absolute;
+  top: 150px;
+  left: -50px;
+  width: 100px;
+  height: 100px;
+  background-color: ${({ theme }) => theme.colors.secondary + "80"};
+  z-index: -1;
+`;
+
+const DotGridBehindImage = styled(DotGrid)`
+  position: absolute;
+  top: -64px;
+  right: -27px;
+  z-index: -1;
+`;
+
+const DotGridInfrontImage = styled(DotGrid)`
+  position: absolute;
+  top: -4px;
+  right: 16px;
+`;
+
+const Circle = styled(BluredBackgroundCircle)`
+  position: absolute;
+  bottom: 100px;
+  right: 25px;
+`;
+
+const Right = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 2;
+  padding-top: 140px;
+
+  p {
+    font-size: 24px;
+    margin-top: 15px;
+  }
+
+  p span {
+    font-weight: bold;
+  }
+
+  & > div {
+    height: 100%;
+    display: flex;
+    align-self: flex-end;
+    align-items: flex-end;
+  }
+`;
+
+const Testimonials: React.FC = () => {
+  return (
+    <Wrapper>
+      <Left>
+        <div>
+          <Image src={JoeZImg} />
+          <RectangleBehindImage />
+          <DotGridBehindImage />
+          <DotGridInfrontImage dotThemeColor="secondary" boxSize={100} />
+          <Circle />
+        </div>
+      </Left>
+      <Right>
+        <h2>Testimonials by them</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. <span>-Joe Z</span>
+        </p>
+        <div>
+          <SliderControls
+            backDisabled={false}
+            onBackClick={() => {}}
+            onForwardClick={() => {}}
+          />
+        </div>
+      </Right>
+    </Wrapper>
+  );
+};
+
+export default Testimonials;
