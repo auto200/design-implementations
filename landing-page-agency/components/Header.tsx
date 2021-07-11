@@ -11,10 +11,12 @@ const Wrapper = styled.header`
 const Navigation = styled.nav`
   min-width: 370px;
   font-weight: bold;
-  span {
+  a {
     padding: 10px;
     cursor: pointer;
     border-radius: 10px;
+    color: ${({ theme }) => theme.colors.primary};
+    text-decoration: none;
 
     transition: background-color 0.2s ease;
     &:hover {
@@ -28,11 +30,11 @@ const Header: React.FC = () => {
     <Wrapper>
       <Image src={Logo} />
       <Navigation>
-        <span>About</span>
-        <span>Services</span>
-        <span>Client</span>
-        <span>Blog</span>
-        <span>Contact</span>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Client</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
       </Navigation>
     </Wrapper>
   );
