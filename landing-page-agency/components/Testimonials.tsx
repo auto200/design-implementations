@@ -30,14 +30,14 @@ const RectangleBehindImage = styled.div`
 const DotGridBehindImage = styled(DotGrid)`
   position: absolute;
   top: -64px;
-  right: -27px;
+  right: -59px;
   z-index: -1;
 `;
 
 const DotGridInfrontImage = styled(DotGrid)`
   position: absolute;
   top: -4px;
-  right: 16px;
+  right: -16px;
 `;
 
 const Circle = styled(BluredBackgroundCircle)`
@@ -47,15 +47,17 @@ const Circle = styled(BluredBackgroundCircle)`
 `;
 
 const Right = styled.div`
+  flex: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex: 2;
   padding-top: 140px;
+  margin-left: 150px;
 
   p {
     font-size: 24px;
     margin-top: 15px;
+    max-width: 650px;
   }
 
   p span {
