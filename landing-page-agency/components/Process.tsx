@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import BluredBackgroundCircle from "./shared/decorations/BluredBackgroundCircle";
 import DotGrid from "./shared/DotGrid";
 import PillButton from "./shared/PillButton";
 
@@ -6,13 +7,10 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   margin-top: 80px;
-  & > div {
-    width: 50%;
-    height: 100%;
-  }
 `;
 
 const Left = styled.div`
+  flex: 1;
   & > div {
     width: 80%;
     height: 80%;
@@ -20,12 +18,13 @@ const Left = styled.div`
     flex-direction: column;
     justify-content: space-evenly;
 
-    p {
-      width: 85%;
+    h2 {
+      margin-bottom: 55px;
     }
 
-    button {
-      padding-left: 50px;
+    p {
+      width: 85%;
+      margin-bottom: 65px;
     }
   }
 `;
@@ -36,6 +35,7 @@ const DetailsButton = styled(PillButton)`
 `;
 
 const Right = styled.div`
+  flex: 1;
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(2, 1fr);
 
@@ -51,19 +51,6 @@ const Right = styled.div`
       left: 0;
     }
 
-    .floating-circle {
-      position: absolute;
-      top: -30px;
-      right: -30px;
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      /* backdrop-filter: blur(10px) opacity(50%)
-        drop-shadow(0 0 0 ${({ theme }) => theme.colors.secondary}); */
-      background-color: ${({ theme }) => theme.colors.secondary};
-      opacity: 0.5;
-    }
-
     .semi-circle {
       position: absolute;
       top: 100px;
@@ -76,6 +63,12 @@ const Right = styled.div`
       opacity: 0.5;
     }
   }
+`;
+
+const FloatingCircle = styled(BluredBackgroundCircle)`
+  position: absolute;
+  top: -30px;
+  right: -30px;
 `;
 
 const OrangeDotGrid = styled(DotGrid)`
@@ -110,7 +103,7 @@ const Process: React.FC = () => {
         </div>
         <div>
           <img src="images/process/research.png" alt="research" />
-          <div className="floating-circle" />
+          <FloatingCircle />
         </div>
         <div>
           <img src="images/process/consulting.png" alt="consulting" />
@@ -118,7 +111,7 @@ const Process: React.FC = () => {
         </div>
         <div>
           <img src="images/process/development.png" alt="development" />
-          <OrangeDotGrid dotColor="#FCA311" />
+          <OrangeDotGrid dotThemeColor="secondary" />
         </div>
       </Right>
     </Wrapper>
