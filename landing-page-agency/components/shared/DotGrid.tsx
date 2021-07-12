@@ -3,16 +3,16 @@ import styled from "styled-components";
 import { ThemeType } from "utils/theme";
 
 interface WraperProps {
-  size: number;
+  $size: number;
   gridRowCount: number;
   gap: number;
 }
 
 const Wrapper = styled.div.attrs<WraperProps>(
-  ({ size, gridRowCount, gap }) => ({
+  ({ $size, gridRowCount, gap }) => ({
     style: {
-      width: size,
-      height: size,
+      width: $size,
+      height: $size,
       gridTemplate: `repeat(${gridRowCount}, ${gap}px) / repeat(${gridRowCount}, ${gap}px)`,
     },
   })
@@ -21,14 +21,14 @@ const Wrapper = styled.div.attrs<WraperProps>(
 `;
 
 interface DotProps {
-  size: number;
+  $size: number;
   dotThemeColor: keyof ThemeType["colors"];
 }
 
-const Dot = styled.div.attrs<DotProps>(({ size }) => ({
+const Dot = styled.div.attrs<DotProps>(({ $size }) => ({
   style: {
-    width: `${size}px`,
-    height: `${size}px`,
+    width: `${$size}px`,
+    height: `${$size}px`,
   },
 }))<DotProps>`
   border-radius: 50%;
@@ -62,11 +62,14 @@ const DotGrid: React.FC<IDotGrid> = ({
     setGrid(new Array(rowCount ** 2).fill(null));
   }, [boxSize, gap]);
 
+  //The $ in front of prop is for styled components Transient props so they wont
+  //get passed to the DOM element -
+  //https://styled-components.com/docs/api#transient-props
   return (
     <div {...rest}>
-      <Wrapper size={boxSize} gridRowCount={gridRowCount} gap={gap}>
+      <Wrapper $size={boxSize} gridRowCount={gridRowCount} gap={gap}>
         {grid.map((_, i) => (
-          <Dot dotThemeColor={dotThemeColor} size={dotSize} key={i} />
+          <Dot dotThemeColor={dotThemeColor} $size={dotSize} key={i} />
         ))}
       </Wrapper>
     </div>
