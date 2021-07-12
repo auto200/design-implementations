@@ -8,7 +8,7 @@ const Wrapper = styled.footer`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin-top: 250px;
+  margin-top: 150px;
   background-image: url("images/footer/background.png");
   background-size: cover;
   border-radius: 35px;

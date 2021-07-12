@@ -43,7 +43,7 @@ const DotGridInfrontImage = styled(DotGrid)`
 const Circle = styled(BluredBackgroundCircle)`
   position: absolute;
   bottom: 100px;
-  right: 25px;
+  right: -5px;
 `;
 
 const Right = styled.div`

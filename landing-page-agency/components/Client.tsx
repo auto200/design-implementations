@@ -6,6 +6,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  margin-bottom: 50px;
 
   div {
     margin-top: 20px;

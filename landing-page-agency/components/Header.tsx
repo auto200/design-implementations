@@ -7,7 +7,9 @@ const Wrapper = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 32px;
 `;
+
 const Navigation = styled.nav`
   min-width: 370px;
   font-weight: bold;
