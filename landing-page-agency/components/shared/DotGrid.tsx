@@ -32,8 +32,6 @@ const Dot = styled.div.attrs<DotProps>(({ $size }) => ({
   },
 }))<DotProps>`
   border-radius: 50%;
-  margin-right: 7px;
-  margin-bottom: 7px;
   background-color: ${({ theme, dotThemeColor }) =>
     theme.colors[dotThemeColor]};
 `;
