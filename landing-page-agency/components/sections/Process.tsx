@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import BluredBackgroundCircle from "./shared/decorations/BluredBackgroundCircle";
-import DotGrid from "./shared/DotGrid";
-import PillButton from "./shared/PillButton";
+import BluredBackgroundCircle from "components/shared/decorations/BluredBackgroundCircle";
+import DotGrid from "components/shared/decorations/DotGrid";
+import PillButton from "components/shared/PillButton";
 
 const Wrapper = styled.div`
   display: flex;

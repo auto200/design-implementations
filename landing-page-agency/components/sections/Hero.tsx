@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Image from "next/image";
 import background from "public/images/hero/background.png";
 import person from "public/images/hero/person.png";
-import PillButton from "./shared/PillButton";
+import PillButton from "components/shared/PillButton";
 
 const Wrapper = styled.div`
   position: relative;

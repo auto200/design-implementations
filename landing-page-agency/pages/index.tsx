@@ -1,12 +1,12 @@
-import Header from "components/Header";
-import Hero from "components/Hero";
-import AboutUs from "components/AboutUs";
-import Client from "components/Client";
-import Services from "components/Services";
-import Process from "components/Process";
-import ProductPortfolio from "components/ProductPortfolio";
-import Testimonials from "components/Testimonials";
-import Footer from "components/Footer";
+import Header from "components/sections/Header";
+import Hero from "components/sections/Hero";
+import AboutUs from "components/sections/AboutUs";
+import Client from "components/sections/Client";
+import Services from "components/sections/Services";
+import Process from "components/sections/Process";
+import ProductPortfolio from "components/sections/ProductPortfolio";
+import Testimonials from "components/sections/Testimonials";
+import Footer from "components/sections/Footer";
 
 export default function Home() {
   return (

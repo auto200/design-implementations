@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import DotGrid from "components/shared/DotGrid";
+import DotGrid from "components/shared/decorations/DotGrid";
 
 interface IService {
   iconSrc: string;

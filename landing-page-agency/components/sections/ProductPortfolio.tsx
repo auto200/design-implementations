@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import PillButton from "./shared/PillButton";
-import SliderControls from "./shared/SliderControls";
+import PillButton from "components/shared/PillButton";
+import SliderControls from "components/shared/SliderControls";
 
 const Wrapper = styled.div`
   margin-top: 180px;

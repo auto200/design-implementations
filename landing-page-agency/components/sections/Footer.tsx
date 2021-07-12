@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import DotGrid from "./shared/DotGrid";
+import DotGrid from "components/shared/decorations/DotGrid";
 
 const Wrapper = styled.footer`
   position: relative;

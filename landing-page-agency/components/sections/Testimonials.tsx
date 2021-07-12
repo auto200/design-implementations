@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import Image from "next/image";
 import JoeZImg from "public/images/testimontials/joe_z.png";
-import SliderControls from "./shared/SliderControls";
-import DotGrid from "./shared/DotGrid";
-import BluredBackgroundCircle from "./shared/decorations/BluredBackgroundCircle";
+import SliderControls from "components/shared/SliderControls";
+import DotGrid from "components/shared/decorations/DotGrid";
+import BluredBackgroundCircle from "components/shared/decorations/BluredBackgroundCircle";
 
 const Wrapper = styled.div`
   margin-top: 250px;
