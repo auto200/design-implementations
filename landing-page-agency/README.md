@@ -4,7 +4,7 @@
 
 ## Styled Components
 
-#### Strict type annotations for styled components theme.
+### Strict type annotations for styled components theme.
 
 First create `theme.ts` file, theme object and mark it `as const` thanks to [typescript 3.4+](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-4.html#const-assertions) Then export it's type
 
@@ -76,7 +76,7 @@ const Text: React.FC<Props> = ({ themedColor = "primary", children }) => {
 export default Text;
 ```
 
-#### [Transient props](https://styled-components.com/docs/api#transient-props) v5.1+
+### [Transient props](https://styled-components.com/docs/api#transient-props) v5.1+
 
 Prevent Styled Components from passing props to he DOM element
 
