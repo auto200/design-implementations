@@ -17,6 +17,16 @@
 
 body {
   font-family: "Karla", "Arial", "Courier New", Courier, monospace;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--lightGray);
+}
+
+.card {
+  max-width: 640px;
+  border: 15px;
 }
 
 .card__section {
@@ -27,6 +37,10 @@ body {
   margin: 15px 0;
   font-size: 22px;
   font-weight: bold;
+}
+
+.card__firstSection {
+  background-color: white;
 }
 
 .card__firstSection__header--cyan {
@@ -83,6 +97,7 @@ body {
 
 .card__thirdSection__list__item {
   opacity: 0.7;
+  line-height: 22px;
 }
 
 .sign-up-btn {
@@ -94,4 +109,20 @@ body {
   box-shadow: 0 5px 10px -10px black;
   border: none;
   font-size: 18px;
+}
+
+@media screen and (min-width: 375px) {
+  .card {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .side_by_sider {
+    display: flex;
+  }
+
+  .card__secondSection,
+  .card__thirdSection {
+    flex: 1;
+  }
 }
