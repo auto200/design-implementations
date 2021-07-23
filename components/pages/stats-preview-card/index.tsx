@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { screens } from "tailwindcss/defaultTheme";
 
 const stats = [
   {
@@ -37,14 +38,16 @@ const StatsPreview = () => {
         <div className="text-SPC-text-primary bg-SPC-card-bg rounded-md overflow-hidden text-center sm:flex sm:max-w-4xl sm:text-left">
           {/* image */}
           <div className="relative sm:w-5/12 sm:order-1">
-            <img
-              src="/stats-preview-card/image-header-mobile.jpg"
-              className="sm:hidden"
-            />
-            <img
-              src="/stats-preview-card/image-header-desktop.jpg"
-              className="hidden w-full h-full sm:inline sm:object-cover"
-            />
+            <picture>
+              <source
+                srcSet="/stats-preview-card/image-header-desktop.jpg"
+                media={`(min-width: ${screens?.sm})`}
+              />
+              <img
+                src="/stats-preview-card/image-header-mobile.jpg"
+                className="w-full h-full sm:object-cover"
+              />
+            </picture>
             <div className="absolute inset-0 w-full h-full z-10 bg-SPC-accent opacity-60" />
           </div>
           {/* texts */}
