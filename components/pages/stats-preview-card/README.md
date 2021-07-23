@@ -25,3 +25,7 @@ module.exports = {
   plugins: [],
 };
 ```
+
+## Flexbox tip
+
+You can achieve `justify-content: space-between` like effect but pushed to one side by applaying `margin-left: auto` or `margin-right: auto` to flexbox children
