@@ -1,32 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
+.card {
   --cyan: hsl(179, 62%, 43%);
   --brightYellow: hsl(71, 73%, 54%);
   --lightGray: hsl(204, 43%, 93%);
   --grayishBlue: hsl(218, 22%, 67%);
-}
 
-body {
-  font-family: "Karla", "Arial", "Courier New", Courier, monospace;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--lightGray);
-}
-
-.card {
   max-width: 640px;
-  border: 15px;
+  font-family: "Karla", "Arial", "Courier New", Courier, monospace;
 }
 .card__section {
   padding: 15px 30px 25px 30px;
@@ -89,7 +70,7 @@ body {
   line-height: 22px;
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 640px) {
   .card {
     border-radius: 10px;
     overflow: hidden;
